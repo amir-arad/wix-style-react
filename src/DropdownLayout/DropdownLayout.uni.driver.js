@@ -66,10 +66,7 @@ export const dropdownLayoutDriverFactory = base => {
      * @param {number} option index
      * @return {Promise<void>}
      */
-    clickAtOption: async index => {
-      const optionDriver = await getOptionDriver(index);
-      return optionDriver.click();
-    },
+    clickAtOption: async index => (await optionElementAt(index)).click(),
 
     /** Clicks on an option with a specific dataHook
      * @param {string} dataHook
@@ -200,7 +197,6 @@ export const dropdownLayoutDriverFactory = base => {
     optionById(optionId) {
       return this.optionByHook(`dropdown-item-${optionId}`);
     },
-
     optionContentAt: position =>
       doIfOptionExists(position, async () => {
         const optionDriver = await getOptionDriver(position);
