@@ -6,11 +6,6 @@ import {
   cleanup,
 } from '../../../test/utils/react';
 import { uniTestkitFactoryCreator } from 'wix-ui-test-utils/vanilla';
-import {
-  baseUniDriverFactory,
-  findByHook,
-  getDataAttributeValue,
-} from '../../../test/utils/unidriver';
 
 import { listItemActionBuilder } from '../../ListItemAction';
 import { ListItemActionDriverFactory } from '../../ListItemAction/ListItemAction.uni.driver';
