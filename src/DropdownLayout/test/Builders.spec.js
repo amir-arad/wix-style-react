@@ -151,7 +151,7 @@ describe('Builders', () => {
       const wrapper = await driver.getOptionElementById(0);
       const testkit = badgeSelectItemTestkitFactory({ wrapper, dataHook });
 
-      expect(await testkit.getMarkerSkin()).toBe(skin);
+      expect(await testkit.getText()).toBe(text);
     });
 
     it('should render custom builder within DropdownLayout', async () => {
