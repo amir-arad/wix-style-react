@@ -6,6 +6,11 @@ import {
   cleanup,
 } from '../../../test/utils/react';
 import { uniTestkitFactoryCreator } from 'wix-ui-test-utils/vanilla';
+import {
+  baseUniDriverFactory,
+  findByHook,
+  getDataAttributeValue,
+} from '../../../test/utils/unidriver';
 
 import { listItemActionBuilder } from '../../ListItemAction';
 import { ListItemActionDriverFactory } from '../../ListItemAction/ListItemAction.uni.driver';
@@ -152,6 +157,37 @@ describe('Builders', () => {
       const testkit = badgeSelectItemTestkitFactory({ wrapper, dataHook });
 
       expect(await testkit.getMarkerSkin()).toBe(skin);
+    });
+
+    it('should render custom builder within DropdownLayout', async () => {
+      const dataHook = 'custom-builder';
+      const title = 'Custom Option 1';
+
+      const customBuilderFunction = ({ id, dataHook, title, disabled }) => ({
+        id,
+        disabled,
+        overrideStyle: true,
+        value: ({ disabled, selected, hovered, ...rest }) => (
+          <div data-hook={dataHook}>{title}</div>
+        ),
+      });
+
+      const options = [customBuilderFunction({ id: 0, dataHook, title })];
+
+      const customDriverFactory = base => ({
+        getTitle: () => base._prop('innerHTML'),
+      });
+
+      const customTestkitFactory = uniTestkitFactoryCreator(
+        customDriverFactory,
+      );
+
+      const { driver } = render(<DropdownLayout visible options={options} />);
+
+      const wrapper = await driver.getOptionElementById(0);
+      const testkit = customTestkitFactory({ wrapper, dataHook });
+
+      expect(await testkit.getTitle()).toBe(title);
     });
   }
 });
