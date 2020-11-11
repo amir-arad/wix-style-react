@@ -1,1 +1,1 @@
-export { badgeSelectItemBuilder } from './BadgeSelectItemBuilder';
+export { default, badgeSelectItemBuilder } from './BadgeSelectItemBuilder';

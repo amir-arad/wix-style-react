@@ -53,3 +53,5 @@ export interface BadgeSelectOption {
   subtitle?: string;
   ellipsis?: boolean;
 }
+
+export default BadgeSelectOption;
