@@ -1,8 +1,9 @@
-import { baseUniDriverFactory, findByHook } from '../../test/utils/unidriver';
-import { textUniDriverFactory } from '../Text/Text.uni.driver';
-import { dataHooks } from './constants';
+import { baseUniDriverFactory } from '../../test/utils/unidriver';
+import { listItemSelectDriverFactory } from '../ListItemSelect/ListItemSelect.uni.driver';
 
 export const badgeSelectItemDriverFactory = base => {
+  const listItemSelectDriver = listItemSelectDriverFactory(base);
+
   return {
     ...baseUniDriverFactory(base),
 
@@ -10,20 +11,12 @@ export const badgeSelectItemDriverFactory = base => {
      * Gets the badge select text
      * @return {Promise<string>} innerHTML content
      */
-    getText: () => {
-      const textDriver = textUniDriverFactory(findByHook(base, dataHooks.text));
-      return textDriver.getText();
-    },
+    getText: () => listItemSelectDriver.getTitle(),
 
     /**
      * Gets the badge select subtitle
      * @return {Promise<string>} innerHTML content
      */
-    getSubtitle: () => {
-      const textDriver = textUniDriverFactory(
-        findByHook(base, dataHooks.subtitle),
-      );
-      return textDriver.getText();
-    },
+    getSubtitleText: () => listItemSelectDriver.getSubtitle(),
   };
 };
