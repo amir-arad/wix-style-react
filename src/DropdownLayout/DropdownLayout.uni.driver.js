@@ -200,6 +200,7 @@ export const dropdownLayoutDriverFactory = base => {
     optionById(optionId) {
       return this.optionByHook(`dropdown-item-${optionId}`);
     },
+
     optionContentAt: position =>
       doIfOptionExists(position, async () => {
         const optionDriver = await getOptionDriver(position);
