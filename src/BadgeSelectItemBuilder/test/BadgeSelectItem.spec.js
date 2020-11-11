@@ -1,5 +1,5 @@
 import React from 'react';
-import BadgeOption from '../BadgeSelectItemBuilder';
+import { default as BadgeSelectItem } from '../BadgeSelectItemBuilder';
 import { SKINS } from '../constants';
 import { cleanup, createRendererWithUniDriver } from '../../../test/utils/unit';
 
@@ -17,19 +17,19 @@ describe('BadgeSelectItem', () => {
   afterEach(cleanup);
 
   it('should render', async () => {
-    const { driver } = render(<BadgeOption {...requiredProps} />);
+    const { driver } = render(<BadgeSelectItem {...requiredProps} />);
     expect(await driver.exists()).toBe(true);
   });
 
   it('should render text', async () => {
-    const { driver } = render(<BadgeOption {...requiredProps} />);
+    const { driver } = render(<BadgeSelectItem {...requiredProps} />);
     expect(await driver.getText()).toBe(requiredProps.text);
   });
 
   it('should render subtitle', async () => {
     const subtitle = 'subtitle';
     const { driver } = render(
-      <BadgeOption {...requiredProps} subtitle={subtitle} />,
+      <BadgeSelectItem {...requiredProps} subtitle={subtitle} />,
     );
     expect(await driver.getSubtitleText()).toBe(subtitle);
   });
