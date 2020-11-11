@@ -5,7 +5,7 @@ import { cleanup, createRendererWithUniDriver } from '../../../test/utils/unit';
 
 import { badgeSelectItemDriverFactory } from '../BadgeSelectItem.uni.driver';
 
-describe('BadgeSelect', () => {
+describe('BadgeSelectItem', () => {
   const render = createRendererWithUniDriver(badgeSelectItemDriverFactory);
 
   const requiredProps = {

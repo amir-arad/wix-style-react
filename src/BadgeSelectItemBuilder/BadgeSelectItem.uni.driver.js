@@ -8,14 +8,14 @@ export const badgeSelectItemDriverFactory = base => {
     ...baseUniDriverFactory(base),
 
     /**
-     * Gets the badge select text
-     * @return {Promise<string>} innerHTML content
+     * Gets the badge select item text
+     * @return {Promise<string>}
      */
     getText: () => listItemSelectDriver.getTitle(),
 
     /**
-     * Gets the badge select subtitle
-     * @return {Promise<string>} innerHTML content
+     * Gets the badge select item subtitle
+     * @return {Promise<string>}
      */
     getSubtitleText: () => listItemSelectDriver.getSubtitle(),
   };
