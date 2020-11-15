@@ -15,7 +15,7 @@ export type BadgeSelectItemBuilderFn = (data: {
   disabled: boolean;
   overrideOptionStyle: true;
   id: string | number;
-  value: (props?: Partial<BadgeSelectOption>) => React.ReactNode;
+  value: (props?: Partial<BadgeSelectItem>) => React.ReactNode;
 };
 
 export type BadgeSelectItemSkin =
@@ -54,4 +54,6 @@ export interface BadgeSelectOption {
   ellipsis?: boolean;
 }
 
-export default BadgeSelectOption;
+type BadgeSelectItem = BadgeSelectOption ;
+
+export default BadgeSelectItem;
