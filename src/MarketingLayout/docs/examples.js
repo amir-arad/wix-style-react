@@ -8,6 +8,16 @@ export const description = {
     'Marketing layout is a layout designed to promote new features or display first time visit. Component has title, description, action and illustration areas.',
 };
 
+export const sizeTiny = `
+  <MarketingLayout
+    title="Tiny Size Layout"
+    description="This layout requires less attention. It can promote side features that might add value, but are not mandatory to achieve main goals."
+    actions={<Button size="small">Get Started</Button>}
+    size="tiny"
+    image={<Image/>}
+  />
+`;
+
 export const sizeSmall = `
   <MarketingLayout
     title="Small Size Layout"
