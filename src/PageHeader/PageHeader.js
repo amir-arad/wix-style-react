@@ -124,7 +124,7 @@ export default class PageHeader extends React.PureComponent {
     const _title = getTitle(title, minimized);
 
     return (
-      <div className={st(classes.root, className)} data-hook={dataHook}>
+      <div className={st(classes.root, {}, className)} data-hook={dataHook}>
         <div className={classes.header}>
           <div>
             {this._animateComponent(
@@ -133,7 +133,6 @@ export default class PageHeader extends React.PureComponent {
               <div
                 className={st(classes.breadcrumbsContainer, {
                   absolute: !breadcrumbsExists,
-                  minimized,
                 })}
                 data-hook={dataHooks.breadcrumbs}
               >
@@ -141,18 +140,18 @@ export default class PageHeader extends React.PureComponent {
               </div>,
             )}
           </div>
-          <div className={st(classes.titleContainer, { minimized })}>
+          <div
+            className={st(classes.titleContainer, {
+              minimized,
+              darkTheme: isDarkTheme(hasBackgroundImage, minimized),
+            })}
+          >
             {showBackButton &&
               onBackClicked &&
               this._animateComponent(
                 !minimized,
                 !breadcrumbsExists,
-                <div
-                  className={st(classes.backButton, {
-                    minimized,
-                    darkTheme: isDarkTheme(hasBackgroundImage, minimized),
-                  })}
-                >
+                <div className={classes.backButton}>
                   <IconButton
                     dataHook={dataHooks.backButton}
                     onClick={onBackClicked}
@@ -166,10 +165,7 @@ export default class PageHeader extends React.PureComponent {
                 this._animateComponent(
                   !minimized,
                   !breadcrumbsExists,
-                  <div
-                    className={st(classes.title, minimized)}
-                    data-hook={dataHooks.title}
-                  >
+                  <div className={classes.title} data-hook={dataHooks.title}>
                     <Heading
                       ellipsis={typeof _title === 'string'}
                       light={isDarkTheme(hasBackgroundImage, minimized)}
@@ -182,10 +178,7 @@ export default class PageHeader extends React.PureComponent {
                 this._animateComponent(
                   !minimized,
                   !breadcrumbsExists,
-                  <div
-                    className={st({ minimized })}
-                    data-hook={dataHooks.subtitle}
-                  >
+                  <div data-hook={dataHooks.subtitle}>
                     <Text
                       ellipsis={typeof subtitle === 'string'}
                       light={isDarkTheme(hasBackgroundImage, minimized)}
