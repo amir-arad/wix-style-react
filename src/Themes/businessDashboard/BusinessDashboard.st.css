@@ -114,6 +114,11 @@
   -st-default: Badge;
 }
 
+:import {
+  -st-from: "../../Input/Input.st.css";
+  -st-default: Input;
+}
+
 /* Overrides */
 :import {
   -st-from: "./components/Button.st.css";
@@ -230,6 +235,11 @@
   -st-default: BadgeOverrides;
 }
 
+:import {
+  -st-from: "./components/Input.st.css";
+  -st-default: InputOverrides;
+}
+
 @st-scope .root {
   Button {
     -st-mixin: ButtonOverrides();
@@ -297,6 +307,9 @@
   Badge {
     -st-mixin: BadgeOverrides();
   }
+  Input {
+    -st-mixin: InputOverrides();
+  }
 }
 
 /* Portaled node support
@@ -310,7 +323,6 @@
   Tooltip.root {
     -st-mixin: TooltipOverrides();
   }
-
   PopoverMenu.root {
     -st-mixin: PopoverMenuOverrides();
   }
