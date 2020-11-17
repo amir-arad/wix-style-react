@@ -1,0 +1,4 @@
+:import {
+  -st-from: "../../../EmptyState/EmptyState.st.css";
+  -st-default: EmptyState;
+}
