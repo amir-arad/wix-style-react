@@ -1,6 +1,6 @@
 :import {
   -st-from: '../Foundation/stylable/colors.st.css';
-  -st-named: B10,D80-70,D80;
+  -st-named: B10, D80-70, D80;
 }
 
 :import {
@@ -8,11 +8,11 @@
   -st-default: calc_rgba;
 }
 
-.truncatedFlexChild{
+.truncatedFlexChild {
   min-width: 0;
 }
 
-.root{
+.root {
   display: flex;
   justify-content: flex-start;
   flex-direction: row;
@@ -20,29 +20,34 @@
 }
 
 .header {
-  flex:1;
   -st-mixin: truncatedFlexChild;
+  flex: 1;
 }
 
-.breadcrumbsContainer{
-  margin-left: -10px;
+.breadcrumbsContainer {
   -st-states: absolute;
+  margin-left: -10px;
+}
+
+:global([dir='rtl']) .breadcrumbsContainer {
+  margin-left: 0;
+  margin-right: -10px;
 }
 
 .breadcrumbsContainer:absolute {
   position: absolute;
 }
 
-.titleContainer{
-  display: flex;
+.titleContainer {
   -st-states: minimized, darkTheme;
+  display: flex;
 }
 
-.titleContainer:minimized{
+.titleContainer:minimized {
   position: absolute;
 }
 
-.titleContainer .backButton{
+.titleContainer .backButton {
   position: relative;
   top: 6px;
   left: -12px;
@@ -51,33 +56,37 @@
   height: 36px;
 }
 
-.titleContainer .backButton button{
+:global([dir='rtl']) .titleContainer .backButton {
+  right: -12px;
+}
+
+.titleContainer .backButton button {
   color: value(B10);
   border: none;
   background-color: transparent;
 }
 
-.titleContainer .backButton button:hover{
+.titleContainer .backButton button:hover {
   background-color: calc_rgba(value(D80), 1);
 }
 
-.titleContainer .backButton button:active{
+.titleContainer .backButton button:active {
   background-color: value(D80-70)
 }
 
-.titleContainer:darkTheme .backButton button{
+.titleContainer:darkTheme .backButton button {
   color: value(D80);
 }
 
-.titleContainer:darkTheme .backButton button:hover{
+.titleContainer:darkTheme .backButton button:hover {
   background-color: calc_rgba(value(D80), 0.3);
 }
 
-.titleContainer:darkTheme .backButton button:active{
+.titleContainer:darkTheme .backButton button:active {
   background-color: calc_rgba(value(D80), 0.2);
 }
 
-.titleContainer .backButton .backButtonIcon{
+.titleContainer .backButton .backButtonIcon {
   display: block;
   width: 36px;
   height: 36px;
@@ -85,18 +94,24 @@
   left: -1px;
 }
 
-.titleContainer .titleColumn{
+:global([dir='rtl']) .titleContainer .backButton .backButtonIcon {
+  transform: scaleX(-1);
+  right: -1px;
+}
+
+.titleContainer .titleColumn {
   -st-mixin: truncatedFlexChild;
 }
-.titleContainer .titleColumn .title{
+
+.titleContainer .titleColumn .title {
   height: 48px;
 }
 
 .actionsBar {
+  -st-states: withBreadcrumbs, minimized;
   height: 30px;
   margin-top: 6px;
   margin-left: auto;
-  -st-states: withBreadcrumbs,minimized;
 }
 
 .actionsBar:withBreadcrumbs {
@@ -105,21 +120,4 @@
 
 .actionsBar:minimized {
   margin-top: -3px;
-}
-
-:global(.rtl) .breadcrumbsContainer,
-:global([dir='rtl']) .breadcrumbsContainer {
-  margin-left: 0;
-  margin-right: -10px;
-}
-
-:global(.rtl) .backButton,
-:global([dir='rtl']) .backButton {
-  right: -12px;
-}
-
-:global(.rtl) .backButtonIcon,
-:global([dir='rtl']) .backButtonIcon {
-  transform: scaleX(-1);
-  right: -1px;
 }
