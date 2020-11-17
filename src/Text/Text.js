@@ -3,12 +3,14 @@ import RawText from './RawText';
 import PropTypes from 'prop-types';
 import { st, classes } from './Text.st.css';
 import Ellipsis, { extractEllipsisProps } from '../common/Ellipsis';
+import { TooltipCommonProps } from '../common/PropTypes/TooltipCommon';
 
-const TextWithEllipsis = ({ className, ...props }) => {
+const TextWithEllipsis = ({ className, size, tooltipProps, ...props }) => {
   const { ellipsisProps, componentProps } = extractEllipsisProps(props);
   return (
     <Ellipsis
       {...ellipsisProps}
+      {...tooltipProps}
       wrapperClassName={st(classes.root, {
         size: props.size,
         weight: props.weight,
@@ -17,6 +19,7 @@ const TextWithEllipsis = ({ className, ...props }) => {
       render={({ ref, ellipsisClasses, ellipsisInlineStyle }) => (
         <RawText
           {...componentProps}
+          size={size}
           ref={ref}
           className={ellipsisClasses(className)}
           style={ellipsisInlineStyle}
@@ -129,6 +132,9 @@ TextWithEllipsis.propTypes = {
 
   /** align tooltip content */
   textAlign: PropTypes.oneOf(['start', 'center']),
+
+  /** Properties for tooltip */
+  tooltipProps: PropTypes.shape(TooltipCommonProps),
 };
 
 TextWithEllipsis.defaultProps = {

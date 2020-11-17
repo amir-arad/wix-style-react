@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { EllipsisCommonProps } from '../common/Ellipsis';
-import { OmitPolyfill } from '../common';
+import { OmitPolyfill, TooltipCommonProps } from '../common';
 
 export type TextWithAsProp<T> =
   | TextAsSpanProps<T>
@@ -42,6 +42,7 @@ export type TextPropsBase = EllipsisCommonProps & {
   light?: boolean;
   weight?: TextWeight;
   listStyle?: ListStyle;
+  tooltipProps?: TooltipCommonProps;
 };
 
 export type TextProps = TextWithAsProp<TextPropsBase>;
