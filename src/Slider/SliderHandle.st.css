@@ -39,7 +39,7 @@
 }
 
 .tooltip {
-  -st-mixin: text-small-normal;
+  -st-mixin: text-small-normal, shadow30;
   position: absolute;
   background-color: value(D10);
   color: value(D80);
@@ -47,7 +47,6 @@
   border-radius: 8px;
   padding: 10px 15px;
   bottom: 100%;
-  box-shadow: value(shadow30);
   user-select: none;
   transform: translateX(-50%);
   left: 12px;

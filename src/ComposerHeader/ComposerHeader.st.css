@@ -22,7 +22,7 @@
 }
 
 .root:dropShadow {
-  box-shadow: value(shadow20);
+  -st-mixin: shadow20;
 }
 
 .root:size(small) {

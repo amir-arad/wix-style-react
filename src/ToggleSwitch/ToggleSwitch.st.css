@@ -105,5 +105,5 @@
 }
 
 .root::knob {
-  box-shadow: value(shadow10);
+  -st-mixin: shadow10;
 }

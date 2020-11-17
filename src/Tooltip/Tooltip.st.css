@@ -51,10 +51,9 @@
 
   border-radius: 8px;
   box-sizing: border-box;
-  box-shadow: value(shadow30);
   -webkit-font-smoothing: antialiased;
 
-  -st-mixin: text-small-normal;
+  -st-mixin: text-small-normal, shadow30;
 
   padding: 12px 24px;
 
@@ -68,10 +67,9 @@
 
   border-radius: 8px;
   box-sizing: border-box;
-  box-shadow: value(shadow30);
   -webkit-font-smoothing: antialiased;
 
-  -st-mixin: text-tiny-thin;
+  -st-mixin: text-tiny-thin, shadow30;
 
   padding: 8px 12px 7px 12px;
 

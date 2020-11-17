@@ -42,7 +42,7 @@
 }
 
 .root:contentOutline(shadow) .contentArea{
-  box-shadow: value(shadow30);
+  -st-mixin: shadow30;
 }
 
 .root:contentOutline(border) .contentArea {
