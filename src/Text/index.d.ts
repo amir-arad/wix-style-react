@@ -32,7 +32,7 @@ type TextAsComponentProps<T> = T & {
   [additionalProps: string]: any;
 };
 
-export type TextPropsBase = EllipsisCommonProps & {
+export type TextPropsBase = Omit<EllipsisCommonProps, 'size'> & {
   dataHook?: string;
   tagName?: string;
   className?: string;
