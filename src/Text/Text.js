@@ -5,7 +5,7 @@ import { st, classes } from './Text.st.css';
 import Ellipsis, { extractEllipsisProps } from '../common/Ellipsis';
 import { TooltipCommonProps } from '../common/PropTypes/TooltipCommon';
 
-const TextWithEllipsis = ({ className, size, tooltipProps, ...props }) => {
+const TextWithEllipsis = ({ className, tooltipProps, ...props }) => {
   const { ellipsisProps, componentProps } = extractEllipsisProps(props);
   return (
     <Ellipsis
@@ -19,7 +19,6 @@ const TextWithEllipsis = ({ className, size, tooltipProps, ...props }) => {
       render={({ ref, ellipsisClasses, ellipsisInlineStyle }) => (
         <RawText
           {...componentProps}
-          size={size}
           ref={ref}
           className={ellipsisClasses(className)}
           style={ellipsisInlineStyle}
