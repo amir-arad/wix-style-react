@@ -9,6 +9,7 @@ export interface MarketingLayoutProps {
   actions?: React.ReactNode;
   title?: React.ReactNode;
   description?: React.ReactNode;
+  badge?: React.ReactNode;
 }
 
 export default class MarketingLayout extends React.PureComponent<

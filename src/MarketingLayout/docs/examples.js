@@ -59,6 +59,30 @@ export const imageBackgroundColor = `
   />
 `;
 
+export const badge = `
+  <Card>
+    <MarketingLayout
+      title="Badge on Medium Layout"
+      description="This layout is very prominent, use it to promote apps or things like staff featured templates."
+      actions={<Button size="medium">Get Started</Button>}
+      image={<Image/>}
+      badge={<Badge size="small">badge</Badge>}
+    />
+  </Card>
+`;
+
+export const hiddenBadge = `
+  <Card>
+    <MarketingLayout
+      title="Hidden Badge on Medium Layout"
+      description="The hiddenBadge prop is used to align the layout with marketing layouts that do have a badge."
+      actions={<Button size="medium">Get Started</Button>}
+      image={<Image/>}
+      hiddenBadge
+    />
+  </Card>
+`;
+
 export const advanced = `
   <Card>
     <MarketingLayout

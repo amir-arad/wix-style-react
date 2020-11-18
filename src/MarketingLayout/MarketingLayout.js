@@ -54,6 +54,10 @@ class MarketingLayout extends React.PureComponent {
     title: PropTypes.node,
     /** Description as a string or custom element. */
     description: PropTypes.node,
+    /** Add a badge to the layout */
+    badge: PropTypes.node,
+    /** Show spacing as if there is a hidden badge in the layout */
+    hiddenBadge: PropTypes.bool,
   };
 
   static defaultProps = {
@@ -99,14 +103,23 @@ class MarketingLayout extends React.PureComponent {
   };
 
   _renderContentCell = span => {
-    const { size, actions, title, description } = this.props;
+    const {
+      size,
+      actions,
+      title,
+      description,
+      badge,
+      hiddenBadge,
+    } = this.props;
     return (
       <Cell key="content" span={span}>
+        {badge && !hiddenBadge && <div className={classes.badge}>{badge}</div>}
         <Content
           size={size}
           actions={actions}
           title={title}
           description={description}
+          badge={badge}
         />
       </Cell>
     );
@@ -131,6 +144,8 @@ class MarketingLayout extends React.PureComponent {
   render() {
     const {
       size,
+      badge,
+      hiddenBadge,
       inverted,
       actions,
       dataHook,
@@ -141,6 +156,8 @@ class MarketingLayout extends React.PureComponent {
       <div
         className={st(classes.root, {
           size,
+          badge: !!badge,
+          hiddenBadge,
           inverted,
           withActions: !!actions,
           withImageBackground: !!imageBackgroundColor,
