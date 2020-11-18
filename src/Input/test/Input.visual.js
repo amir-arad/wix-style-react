@@ -81,7 +81,7 @@ export const runTests = (
     );
   });
 
-  storiesOf('Input', module).add('prefix/suffix', () => {
+  storiesOf(storiesTitle, module).add('prefix/suffix', () => {
     return testWithTheme(
       <div>
         <WrappedInputAffix />
