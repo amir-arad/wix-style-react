@@ -18,7 +18,7 @@
 }
 
 .root:containerStyles::contentContainer {
-  -st-mixin: shadow10;
+  box-shadow: value(shadow10);
 }
 
 .root::options::-webkit-scrollbar {

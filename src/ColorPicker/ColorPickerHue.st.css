@@ -36,7 +36,7 @@
 }
 
 .handle {
-  -st-mixin: shadow10;
+  box-shadow: value(shadow10);
   position: absolute;
   top: -2px;
   left: 0;

@@ -81,7 +81,7 @@
 }
 
 .iconButtonShadow{
-  -st-mixin: shadow10;
+  box-shadow: value(shadow10);
   border-radius: 50%;
 }
 

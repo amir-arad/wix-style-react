@@ -30,7 +30,7 @@
 }
 
 .root:open .header {
-  -st-mixin: shadow30;
+  box-shadow: value(shadow30);
 }
 
 .root:open:hideShadow .header {

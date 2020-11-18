@@ -18,7 +18,7 @@
 }
 
 .root::popoverContent {
-  -st-mixin: shadow10;
+  box-shadow: value(shadow10);
 }
 
 .root:withArrow::popover[data-placement*="top"] .popoverContent,

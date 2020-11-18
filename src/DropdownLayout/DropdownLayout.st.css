@@ -65,7 +65,7 @@
 }
 
 .root:containerStyles .contentContainer{
-  -st-mixin: shadow30;
+  box-shadow: value(shadow30);
   border-radius: 8px;
   position: absolute;
 }

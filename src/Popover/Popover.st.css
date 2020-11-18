@@ -35,7 +35,7 @@
 
 /* Default styles with light theme */
 .root::popoverContent {
-  -st-mixin: shadow30;
+  box-shadow: value(shadow30);
   border: none;
 
   border-radius: 8px;

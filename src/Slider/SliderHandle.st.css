@@ -39,7 +39,8 @@
 }
 
 .tooltip {
-  -st-mixin: text-small-normal, shadow30;
+  -st-mixin: text-small-normal;
+  box-shadow: value(shadow30);
   position: absolute;
   background-color: value(D10);
   color: value(D80);
