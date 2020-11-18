@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Content from './components/Content';
 import { Layout, Cell } from '../Layout';
 import Proportion from '../Proportion';
-import { SIZES } from './constants';
+import { SIZES, ALIGNMENTS } from './constants';
 import { st, classes } from './MarketingLayout.st.css';
 import colors from '../colors.scss';
 
@@ -46,6 +46,8 @@ class MarketingLayout extends React.PureComponent {
     imageBackgroundColor: PropTypes.string,
     /** Size of the marketing layout. */
     size: PropTypes.oneOf(['small', 'medium', 'large']),
+    /** Alignment of the content of the marketing layout. */
+    alignItems: PropTypes.oneOf(['center', 'stretch']),
     /** Invert marketing layout (with image displayed on the left). */
     inverted: PropTypes.bool,
     /** Marketing layout actions. */
@@ -58,6 +60,7 @@ class MarketingLayout extends React.PureComponent {
 
   static defaultProps = {
     size: SIZES.small,
+    alignItems: ALIGNMENTS.center,
     inverted: false,
   };
 
@@ -131,6 +134,7 @@ class MarketingLayout extends React.PureComponent {
   render() {
     const {
       size,
+      alignItems,
       inverted,
       actions,
       dataHook,
@@ -141,6 +145,7 @@ class MarketingLayout extends React.PureComponent {
       <div
         className={st(classes.root, {
           size,
+          alignItems,
           inverted,
           withActions: !!actions,
           withImageBackground: !!imageBackgroundColor,
