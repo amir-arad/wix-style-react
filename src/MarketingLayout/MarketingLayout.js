@@ -54,9 +54,10 @@ class MarketingLayout extends React.PureComponent {
     title: PropTypes.node,
     /** Description as a string or custom element. */
     description: PropTypes.node,
-    /** Add a badge to the layout */
+    /** Add a badge to the layout. */
     badge: PropTypes.node,
-    /** Show spacing as if there is a hidden badge in the layout */
+    /** Show spacing of a badge in the layout. If a badge was given it will be hidden,
+     * if no badge was given there will be spacing as if there is a hidden badge. */
     hiddenBadge: PropTypes.bool,
   };
 
