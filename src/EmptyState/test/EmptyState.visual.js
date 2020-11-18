@@ -163,7 +163,6 @@ export const runTests = (
             testWithTheme(
               <RTLWrapper rtl>
                 <EmptyState {...commonProps} {...props} />
-                ))
               </RTLWrapper>,
             ),
           );
