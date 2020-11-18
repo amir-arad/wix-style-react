@@ -62,8 +62,8 @@ export const imageBackgroundColor = `
 export const badge = `
   <Card>
     <MarketingLayout
-      title="Badge on Medium Layout"
-      description="This layout is very prominent, use it to promote apps or things like staff featured templates."
+      title="Badge"
+      description="The badge prop is meant to receive a Badge component, and display it at the corner of the layout."
       actions={<Button size="medium">Get Started</Button>}
       image={<Image/>}
       badge={<Badge size="small">badge</Badge>}
@@ -74,7 +74,7 @@ export const badge = `
 export const hiddenBadge = `
   <Card>
     <MarketingLayout
-      title="Hidden Badge on Medium Layout"
+      title="Hidden Badge"
       description="The hiddenBadge prop is used to align the layout with marketing layouts that do have a badge."
       actions={<Button size="medium">Get Started</Button>}
       image={<Image/>}
