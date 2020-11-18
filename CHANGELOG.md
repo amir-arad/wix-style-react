@@ -15,10 +15,19 @@ Types of changes:
 1. **Lab** components and features that are still in a work in progress
 
 ## Next
+### Added
+- `<Card/>` - add withShadow prop [#6257](https://github.com/wix/wix-style-react/pull/6257)
+
+### Fixed
+- `<GoogleAddressInput/>`- adding IDs to options recevied from client [#6258](https://github.com/wix/wix-style-react/pull/6258)
+
+
+## 9.40.0 - 2020-11-17
 ### Added 
 - `Themes | Business Dashboard` - add ListItemSelect theme [#6235](https://github.com/wix/wix-style-react/pull/6235)
 - `Themes | Business Dashboard` - add Tooltip theme [#6220](https://github.com/wix/wix-style-react/pull/6220)
-- `Themes | Business Dashboard` - add Badge theme [#6259](https://github.com/wix/wix-style-react/pull/6259
+- `Themes | Business Dashboard` - add Badge theme [#6259](https://github.com/wix/wix-style-react/pull/6259)
+- `Themes | Business Dashboard` - add ListItemAction, ListItemSection and PopoverMenu theme [#6228](https://github.com/wix/wix-style-react/pull/6228)
 
 ### Changed
 - `<Page/>` - migrate to Stylable [#6241](https://github.com/wix/wix-style-react/pull/6241)
