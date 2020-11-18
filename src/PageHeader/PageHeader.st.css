@@ -8,6 +8,8 @@
   -st-default: calc_rgba;
 }
 
+/* Allow flex-child to shrink when there is a truncated descendant
+See: https://css-tricks.com/flexbox-truncated-text/#article-header-id-3 */
 .truncatedFlexChild {
   min-width: 0;
 }
