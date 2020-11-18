@@ -47,7 +47,7 @@
   position: absolute;
 }
 
-.titleContainer .backButton {
+.titleContainer .backButtonWrapper {
   position: relative;
   top: 6px;
   left: -12px;
@@ -56,37 +56,37 @@
   height: 36px;
 }
 
-:global([dir='rtl']) .titleContainer .backButton {
+:global([dir='rtl']) .titleContainer .backButtonWrapper {
   right: -12px;
 }
 
-.titleContainer .backButton button {
+.titleContainer .backButtonWrapper .backButton {
   color: value(B10);
   border: none;
   background-color: transparent;
 }
 
-.titleContainer .backButton button:hover {
+.titleContainer .backButtonWrapper .backButton:hover {
   background-color: calc_rgba(value(D80), 1);
 }
 
-.titleContainer .backButton button:active {
+.titleContainer .backButtonWrapper .backButton:active {
   background-color: value(D80-70)
 }
 
-.titleContainer:darkTheme .backButton button {
+.titleContainer:darkTheme .backButtonWrapper .backButton {
   color: value(D80);
 }
 
-.titleContainer:darkTheme .backButton button:hover {
+.titleContainer:darkTheme .backButtonWrapper .backButton:hover {
   background-color: calc_rgba(value(D80), 0.3);
 }
 
-.titleContainer:darkTheme .backButton button:active {
+.titleContainer:darkTheme .backButtonWrapper .backButton:active {
   background-color: calc_rgba(value(D80), 0.2);
 }
 
-.titleContainer .backButton .backButtonIcon {
+.titleContainer .backButtonWrapper .backButtonIcon {
   display: block;
   width: 36px;
   height: 36px;
@@ -94,7 +94,7 @@
   left: -1px;
 }
 
-:global([dir='rtl']) .titleContainer .backButton .backButtonIcon {
+:global([dir='rtl']) .titleContainer .backButtonWrapper .backButtonIcon {
   transform: scaleX(-1);
   right: -1px;
 }

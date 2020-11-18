@@ -151,8 +151,9 @@ export default class PageHeader extends React.PureComponent {
               this._animateComponent(
                 !minimized,
                 !breadcrumbsExists,
-                <div className={classes.backButton}>
+                <div className={classes.backButtonWrapper}>
                   <IconButton
+                    className={classes.backButton}
                     dataHook={dataHooks.backButton}
                     onClick={onBackClicked}
                   >
