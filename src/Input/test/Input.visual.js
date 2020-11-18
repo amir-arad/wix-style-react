@@ -92,7 +92,7 @@ export const runTests = (
     );
   });
 
-  storiesOf('Input', module).add('rtl', () => {
+  storiesOf(storiesTitle, module).add('rtl', () => {
     return testWithTheme(
       <div>
         <WrappedInputAffix rtl />
