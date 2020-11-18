@@ -119,6 +119,11 @@
   -st-default: Input;
 }
 
+:import {
+  -st-from: "../../Input/IconAffix/IconAffix.st.css";
+  -st-default: IconAffix;
+}
+
 /* Overrides */
 :import {
   -st-from: "./components/Button.st.css";
@@ -236,8 +241,13 @@
 }
 
 :import {
-  -st-from: "./components/Input.st.css";
+  -st-from: "./components/Input/Input.st.css";
   -st-default: InputOverrides;
+}
+
+:import {
+  -st-from: "./components/Input/IconAffix.st.css";
+  -st-default: IconAffixOverrides;
 }
 
 @st-scope .root {
@@ -309,6 +319,9 @@
   }
   Input {
     -st-mixin: InputOverrides();
+  }
+  IconAffix {
+    -st-mixin: IconAffixOverrides();
   }
 }
 
