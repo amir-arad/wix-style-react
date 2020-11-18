@@ -67,7 +67,7 @@ export const runTests = (
     );
   });
 
-  storiesOf('Input', module).add('status indicator', () => {
+  storiesOf(storiesTitle, module).add('status indicator', () => {
     return testWithTheme(
       <div>
         {['error', 'warning', 'loading'].map(status => (
