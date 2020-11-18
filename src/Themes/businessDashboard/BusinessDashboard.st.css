@@ -114,6 +114,11 @@
   -st-default: Badge;
 }
 
+:import {
+  -st-from: "../../Modal/Modal.st.css";
+  -st-default: Modal;
+}
+
 /* Overrides */
 :import {
   -st-from: "./components/Button.st.css";
@@ -230,6 +235,11 @@
   -st-default: BadgeOverrides;
 }
 
+:import {
+  -st-from: "./components/Modal.st.css";
+  -st-default: ModalOverrides;
+}
+
 @st-scope .root {
   Button {
     -st-mixin: ButtonOverrides();
@@ -313,5 +323,9 @@
 
   PopoverMenu.root {
     -st-mixin: PopoverMenuOverrides();
+  }
+
+  Modal.root {
+    -st-mixin: ModalOverrides();
   }
 }

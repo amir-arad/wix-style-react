@@ -1,0 +1,13 @@
+:import {
+  -st-from: "../../../Modal/Modal.st.css";
+  -st-default: Modal;
+}
+
+:import {
+  -st-from: "../foundations/colors.st.css";
+  -st-named: D10-40;
+}
+
+.root {
+  -st-extends: Modal;
+}

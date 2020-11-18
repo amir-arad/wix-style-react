@@ -28,6 +28,7 @@ import * as listItemSelect from './components/ListItemSelect';
 import * as sidebar from './components/Sidebar';
 import * as listItemActions from './components/ListItemAction';
 import * as popoverMenu from './components/PopoverMenu';
+import * as modal from './components/Modal';
 import { Category } from '../../../../stories/storiesHierarchy';
 import Box from '../../../Box';
 import Text from '../../../Text';
@@ -136,6 +137,10 @@ import { theme } from 'wix-style-react/themes/businessDashboard';
           example({
             text: TextComponent('Badge'),
             source: badge.playground,
+          }),
+          example({
+            text: TextComponent('Modal'),
+            source: modal.playground,
           }),
         ],
       }),
