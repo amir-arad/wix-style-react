@@ -63,6 +63,7 @@ class MarketingLayout extends React.PureComponent {
   static defaultProps = {
     size: SIZES.small,
     inverted: false,
+    hiddenBadge: false,
   };
 
   _renderSpacerCell = span => <Cell key="spacer" span={span} />;
