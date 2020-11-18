@@ -36,7 +36,6 @@
 }
 
 .handle {
-  box-shadow: value(shadow10);
   position: absolute;
   top: -2px;
   left: 0;
@@ -45,5 +44,6 @@
   width: 16px;
   background-color: value(D80);
   border-radius: 50%;
+  box-shadow: value(shadow10);
   cursor: pointer;
 }

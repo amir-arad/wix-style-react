@@ -35,11 +35,11 @@
 
 /* Default styles with light theme */
 .root::popoverContent {
-  box-shadow: value(shadow30);
   border: none;
 
   border-radius: 8px;
   box-sizing: border-box;
+  box-shadow: value(shadow30);
   -webkit-font-smoothing: antialiased;
 
   font-size: 14px;

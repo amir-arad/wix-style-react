@@ -65,8 +65,8 @@
 }
 
 .root:containerStyles .contentContainer{
-  box-shadow: value(shadow30);
   border-radius: 8px;
+  box-shadow: value(shadow30);
   position: absolute;
 }
 

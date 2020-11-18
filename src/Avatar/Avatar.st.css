@@ -81,8 +81,8 @@
 }
 
 .iconButtonShadow{
-  box-shadow: value(shadow10);
   border-radius: 50%;
+  box-shadow: value(shadow10);
 }
 
 .avatarContainer:size(size90) .indication,

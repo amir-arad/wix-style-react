@@ -55,7 +55,6 @@
 
 .root {
   -st-states: theme(enum(standard, premium, destructive)), controlButtonAmount(number(min(0), max(2)));
-  box-shadow: value(shadow40);
   background-color: value(D80);
   position: relative;
   max-height: calc(100vh - (value(modalBoxPadding) * 2));
@@ -63,6 +62,7 @@
   flex-direction: column;
   overflow: hidden;
   border-radius: value(radius08);
+  box-shadow: value(shadow40);
 }
 
 .controlButtons {
