@@ -1,4 +1,4 @@
-@st-global-custom-property --shadow10, --shadow20, --shadow30, --shadow40;
+@st-global-custom-property --wsr-shadow10, --wsr-shadow20, --wsr-shadow30, --wsr-shadow40;
 
 :import {
   -st-from: "./foundations/colors.st.css";
@@ -323,9 +323,9 @@
   }
 
   .root {
-    --shadow10: 0 0 8px 0 value(S5);
-    --shadow20: 0 2px 12px 0 value(S4);
-    --shadow30: 0 0 12px 0 value(S5);
-    --shadow40: 0 0 24px 0 value(S5);
+    --wsr-shadow10: 0 0 8px 0 value(S5);
+    --wsr-shadow20: 0 2px 12px 0 value(S4);
+    --wsr-shadow30: 0 0 12px 0 value(S5);
+    --wsr-shadow40: 0 0 24px 0 value(S5);
   }
 }
